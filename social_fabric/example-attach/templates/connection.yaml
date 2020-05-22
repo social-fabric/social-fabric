@@ -1,0 +1,34 @@
+---
+name: {{ BCC_NETWORK_NAME }}-{{ BCC_ORG_NAME }}
+version: 1.0.0
+client:
+  organization: {{ BCC_OR_NAME }}
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+organizations:
+  Org${ORG}:
+    mspid: {{ BCC_ORG_NAME }}MSP
+    peers:
+    - {{ BCC_PEER_ADDR }}
+    certificateAuthorities:
+    - {{ BCC_CA_ADDR }}
+peers:
+  peer0.org${ORG}.example.com:
+    url: grpcs://{{ BCC_CONN_ADDR }}:{{ BCC_PEER_PORT }}
+    tlsCACerts:
+      pem: |
+        {{ BCC_PEER_CERT }}
+    grpcOptions:
+      ssl-target-name-override: {{ BCC_PEER_ADDR }}
+      hostnameOverride: {{ BCC_PEER_ADDR }}
+certificateAuthorities:
+  ca.org${ORG}.example.com:
+    url: https://{{ BCC_CONN_ADDR }}:{{ BCC_ORG_PORT }}
+    caName: {{ BCC_CA_NAME }}
+    tlsCACerts:
+      pem: |
+        {{ BCC_CA_CERT }}
+    httpOptions:
+      verify: false

@@ -1,0 +1,14 @@
+NodeOUs:
+  Enable: true
+  ClientOUIdentifier:
+    Certificate: cacerts/{{ BCC_CA_PEM_CERT }}
+    OrganizationalUnitIdentifier: client
+  PeerOUIdentifier:
+    Certificate: cacerts/{{ BCC_CA_PEM_CERT }}
+    OrganizationalUnitIdentifier: peer
+  AdminOUIdentifier:
+    Certificate: cacerts/{{ BCC_CA_PEM_CERT }}
+    OrganizationalUnitIdentifier: admin
+  OrdererOUIdentifier:
+    Certificate: cacerts/{{ BCC_CA_PEM_CERT }}
+    OrganizationalUnitIdentifier: orderer

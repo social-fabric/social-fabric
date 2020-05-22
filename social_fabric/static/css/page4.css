@@ -1,0 +1,72 @@
+/*
+ Copyright (c) 2020 - Neptunium Inc.
+
+ SPDX-License-Identifier: Apache-2.0
+ */
+
+#p4-hdiv-middle { display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+    height: 30%;
+    width: 80%;
+}
+#p4-vdiv-left { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;
+    height: 100%;
+    width: 20%;
+    margin-right: 10px;
+}
+.p4-vdiv-center-left { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end;
+    height: 100%;
+    width: 30%;
+    margin-right: 10px;
+}
+#p4-obj-label-org {
+}
+#p4-obj-label-addr {
+}
+#p4-obj-label-catype {
+}
+#p4-obj-label-caroot {
+}
+.p4-vdiv-center-right { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;
+    height: 100%;
+    width: 30%;
+}
+#p4-obj-org {
+    padding-left: 10px;
+}
+#p4-obj-country {
+    padding-left: 10px;
+}
+#p4-obj-state {
+    padding-left: 10px;
+}
+#p4-obj-locality {
+    padding-left: 10px;
+}
+#p4-obj-addr {
+    padding-left: 10px;
+}
+#p4-obj-catype {
+    padding-left: 10px;
+    background-color: #DDDDDD;
+}
+#p4-obj-caroot {
+    padding-left: 10px;
+    background-color: #DDDDDD;
+}
+#p4-vdiv-right { display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end;
+    height: 100%;
+    width: 20%;
+}
+#p4-hdiv-right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center;
+}
+#p4-obj-generate-cert {
+    margin-right: 10px;
+}
+#p4-obj-import-cert {
+    visibility: hidden;
+}
+#p4-obj-button-add-owner {
+    margin-right: 10px;
+}
+#p4-obj-button-cancel {
+}

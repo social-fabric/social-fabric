@@ -1,0 +1,102 @@
+/*
+ Copyright (c) 2020 - Neptunium Inc.
+
+ SPDX-License-Identifier: Apache-2.0
+ */
+
+#p3-obj-add-owner {
+}
+#p3-vdiv-list { display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
+    height: 100%;
+    width: 100%;
+}
+#p3-owner-list-header {
+    display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
+    height: 10%;
+    width: 100%;
+    border-bottom: black solid 2px;
+}
+#p3-owner-list {
+    display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.p3-owner-list-row {
+    display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 0;
+    margin: 2px 0 2px 0;
+}
+#p3-obj-label-org {
+    padding-left: 10px;
+    margin-right: 10px;
+    height: 100%;
+    width: 100%;
+}
+.p3-obj-org {
+    padding-left: 10px;
+    margin-right: 10px;
+    height: 100%;
+    width: 100%;
+}
+#p3-obj-label-addr {
+    margin-right: 10px;
+    height: 100%;
+    width: 100%;
+}
+.p3-obj-addr {
+    margin-right: 10px;
+    height: 100%;
+    width: 100%;
+}
+#p3-obj-label-passwd {
+    margin-right: 10px;
+    height: 100%;
+    width: 100%;
+}
+.p3-obj-password {
+    border: 2px solid white;
+    margin-right: 10px;
+    height: 80%;
+    width: 100%;
+}
+.p3-obj-password:hover {
+    border: 2px solid black;
+}
+#p3-obj-label-ca-type {
+    margin-right: 10px;
+    height: 100%;
+    width: 100%;
+}
+.p3-obj-ca-type {
+    margin-right: 10px;
+    height: 100%;
+    width: 100%;
+}
+#p3-obj-label-ca-root {
+    margin-right: 10px;
+    height: 100%;
+    width: 100%;
+}
+.p3-obj-ca-root {
+    margin-right: 10px;
+    height: 100%;
+    width: 100%;
+}
+#p3-obj-hidden-button-users {
+    visibility: hidden;
+    margin: 2px;
+}
+.p3-obj-button-users {
+    margin: 2px;
+}
+#p3-obj-hidden-button-delete {
+    visibility: hidden;
+    margin: 2px;
+}
+.p3-obj-button-delete {
+    margin: 2px;
+}
+#p3-obj-button-close {
+}

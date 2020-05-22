@@ -1,0 +1,11 @@
+{
+  "ENV": "development",
+  "DEBUG": true,
+  "HOST": "localhost",
+  "PORT": 5000,
+  "SECRET_KEY": "SOCIAL_FABRIC_SECRET_KEY",
+  "DATA_PATH": ".",
+  "LOG_PATH": "log",
+  "LOG_MAX_SIZE": 1000000,
+  "LOG_MAX_FILES": 10
+}

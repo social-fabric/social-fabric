@@ -1,0 +1,15 @@
+
+  {{ BCC_COUCHDB_ADDR }}:
+    container_name: {{ BCC_COUCHDB_ADDR }}
+    image: hyperledger/fabric-couchdb:$IMAGE_TAG
+    # Populate the COUCHDB_USER and COUCHDB_PASSWORD to set an admin user and password
+    # for CouchDB.  This will prevent CouchDB from operating in an "Admin Party" mode.
+    environment:
+      - COUCHDB_USER=
+      - COUCHDB_PASSWORD=
+    ports:
+      - {{ BCC_COUCHDB_PORT }}:{{ BCC_COUCHDB_PORT }}
+    networks:
+      - {{ BCC_NETWORK_DOMAIN }}
+
+

@@ -1,0 +1,18 @@
+
+  {{ BCC_CA_ADDR }}:
+    image: hyperledger/fabric-ca:$IMAGE_TAG
+    environment:
+      - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+      - FABRIC_CA_SERVER_CA_NAME={{ BCC_CA_ADDR }}
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_PORT={{ BCC_CA_PORT }}
+    ports:
+      - "{{ BCC_CA_PORT }}:{{ BCC_CA_PORT }}"
+    user: {{ BCC_USER_ID }}
+    command: sh -c 'fabric-ca-server start -b {{ BCC_CA_ADMIN_NAME }}:{{ BCC_CA_ADMIN_PASSWORD }} -d'
+    volumes:
+      - ./../organizations/fabric-ca/{{ BCC_CA_ADDR }}/:/etc/hyperledger/fabric-ca-server
+    container_name: {{ BCC_CA_ADDR }}
+    networks:
+      - {{ BCC_NETWORK_DOMAIN }}
+

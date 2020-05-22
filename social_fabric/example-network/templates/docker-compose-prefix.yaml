@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: Apache-2.0
+
+version: '2'
+
+volumes:
+  {% for orderer in BCC_ORDERER_LIST -%}
+  {{ orderer['addr'] }}:
+  {%- endfor %}
+  {% for peer in BCC_PEER_LIST -%}
+  {{ peer['addr'] }}:
+  {%- endfor %}
+
+networks:
+  {{ BCC_NETWORK_DOMAIN }}:
+
+services:

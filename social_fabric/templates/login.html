@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2020 - Neptunium Inc. -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html { height:80%; width: 80%; margin: 2% 10% 10% 10%;}
+        body { height:100%; width: 100%; display: flex; font-family: 'Laksaman', 'Arial', sans-serif; background-color: #DDDDDD}
+        button { font-size: 100%; padding: 10px 10px; border-radius: 0; border: 2px solid #0673ba; color: white; background-color: #0673ba}
+        button:enabled:hover { border-radius: 0; border: 2px solid black; color: black; background-color: white}
+        button:disabled { text-decoration: line-through; border-radius: 0; border: 2px solid #0673ba; color: lightblue; background-color: #0673ba}
+        label {font-size: 120%; }
+        input { font-size: 100%; font-family: 'Laksaman', 'Arial', sans-serif; }
+
+        #form, #pl-vdiv-all { display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        #pl-hdiv-top { display: flex; flex-direction: row; justify-content: center; align-items: center;
+            height: 26%;
+            width: 100%;
+        }
+        #pl-obj1 {
+        }
+        #pl-msg {
+            height: 40px;
+            font-size: 120%;
+            color: red;
+        }
+        #pl-hdiv-middle { display: flex; flex-direction: row; justify-content: center; align-items: center;
+            margin-top: 5%;
+            height: 30%;
+            width: 100%;
+        }
+        #pl-vdiv-middle-left { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-end;
+            height: 100%;
+        }
+        #pl-obj-label-username {
+            height: 20px;
+            margin: 10px;
+            padding: 2px;
+        }
+        #pl-obj-label-password {
+            height: 20px;
+            margin: 10px;
+            padding: 2px;
+        }
+        #pl-vdiv-middle-right { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-end;
+            height: 100%;
+        }
+        #pl-obj-username {
+            height: 20px;
+            margin: 10px;
+            padding: 2px;
+        }
+        #pl-obj-password {
+            height: 20px;
+            margin: 10px;
+            padding: 2px;
+        }
+        #pl-hdiv-bottom { display: flex; flex-direction: row; justify-content: center; align-items: flex-start;
+            height: 28%;
+            width: 100%;
+        }
+        #pl-obj-button-login {
+            margin-top: 40px;
+            margin-right: 8px;
+        }
+    </style>
+    <script>
+        let pageLogin = ''
+            + '<form id="form" method="post" action="/logon"><div id="pl-vdiv-all">\n'
+            + '   <div id="pl-hdiv-top">\n'
+            + '      <h1><label id="pl-obj1" >Blockchain Component Administration</label></h1>\n'
+            + '   </div>\n'
+            + '   <label id="pl-msg">{{ MESSAGE }}</label>'
+            + '   <div id="pl-hdiv-middle">\n'
+            + '      <div id="pl-vdiv-middle-left">\n'
+            + '         <label id="pl-obj-label-username" >Username</label>\n'
+            + '         <label id="pl-obj-label-password" >Password</label>\n'
+            + '      </div>\n'
+            + '      <div id="pl-vdiv-middle-right">\n'
+            + '         <input type="text" name="username" id="pl-obj-username" />\n'
+            + '         <input type="password" name="password" id="pl-obj-password" />\n'
+            + '         <button id="pl-obj-button-login"  onclick="on_login()" >Login</button>\n'
+            + '      </div>\n'
+            + '   </div>\n'
+            + '   <div id="pl-hdiv-bottom">\n'
+            + '   </div>\n'
+            + '</div></form>\n';
+
+        on_login_next_field = function(event) {
+            if (event.keyCode === 13) {
+                document.getElementById("pl-obj-password").focus();
+                event.preventDefault();
+            }
+        };
+
+        on_login = function () {
+            document.getElementById('form').submit();
+        };
+
+        display_login = function() {
+            document.getElementById("body").innerHTML = pageLogin;
+            document.getElementById("pl-obj-username").addEventListener('keydown', on_login_next_field);
+            document.getElementById("pl-obj-username").focus();
+        };
+    </script>
+</head>
+<body id="body" onload="display_login()">
+</body>
+</html>

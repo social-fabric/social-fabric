@@ -1,0 +1,81 @@
+/*
+ Copyright (c) 2020 - Neptunium Inc.
+
+ SPDX-License-Identifier: Apache-2.0
+ */
+
+#pch-obj-create-channel {
+    margin-right: 10px;
+}
+#pch-obj-export-orderer {
+    margin-right: 10px;
+}
+#pch-obj-attach-channel {
+    margin-right: 10px;
+}
+#pch-vdiv-list { display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
+    height: 100%;
+    width: 100%;
+}
+#pch-channel-list-header {
+    display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
+    height: 10%;
+    width: 100%;
+    border-bottom: black solid 2px;
+}
+#pch-channel-list {
+    display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.pch-channel-list-row {
+    display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 0;
+    margin: 2px 0 2px 0;
+}
+#pch-obj-label-channel {
+    padding-left: 10px;
+    margin-right: 10px;
+    height: 100%;
+    width: 100%;
+}
+.pch-obj-channel {
+    padding-left: 10px;
+    margin-right: 10px;
+    height: 100%;
+    width: 100%;
+}
+#pch-obj-label-org {
+    margin-right: 10px;
+    height: 100%;
+    width: 100%;
+}
+.pch-obj-org {
+    margin-right: 10px;
+    height: 100%;
+    width: 100%;
+}
+#pch-obj-hidden-button-users {
+    visibility: hidden;
+    margin: 2px;
+}
+.pch-obj-button-users {
+    margin: 2px;
+}
+.pch-obj-hidden-button-add-org {
+    visibility: hidden;
+    margin: 2px;
+}
+.pch-obj-button-add-org {
+    margin: 2px;
+}
+#pch-obj-button-close {
+}
+#pch-hidden-link {
+    visibility: hidden;
+}
+#pch-hidden-file-input {
+    visibility: hidden;
+}

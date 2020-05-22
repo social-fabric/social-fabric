@@ -1,0 +1,6 @@
+recursive-include social_fabric/templates *
+recursive-include social_fabric/static *
+recursive-include social_fabric/config *
+recursive-include social_fabric/example-network *
+recursive-include social_fabric/example-attach *
+

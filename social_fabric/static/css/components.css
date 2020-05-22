@@ -1,0 +1,183 @@
+/*
+ Copyright (c) 2020 - Neptunium Inc.
+
+ SPDX-License-Identifier: Apache-2.0
+ */
+
+#pc-obj-consortium-name {
+    margin-right: 10px;
+}
+#pc-obj-consortium-addr {
+    margin-right: 10px;
+}
+#pc-hdiv-add-button { display: flex; flex-direction: row; justify-content: flex-end; align-items: center;
+}
+#pc-obj-button-add-orderer {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#pc-obj-button-add-org {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#pc-obj-button-owner {
+    margin: 10px;
+}
+#pc-node-list-header { display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
+    height: 48px;
+    width: 100%;
+    border-bottom: black solid 2px;
+}
+#pc-node-list { display: flex; flex-direction: column; justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+.pc-node-list-row { display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
+    min-height: 48px;
+    width: 100%;
+    background-color: white;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+#pc-obj-label-addr {
+    width: 20%;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+.pc-obj-addr {
+    margin-left: 10px;
+    width: 20%;
+}
+#pc-obj-label-type {
+    width: 12%;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+.pc-obj-type {
+    width: 12%;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+.pc-div-type { display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
+    width: 12%;
+    margin: 3px;
+}
+#pc-obj-label-name {
+    margin-left: 10px;
+    width: 12%;
+}
+.pc-obj-name {
+    height: 100%;
+    width: 10%;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 10px;
+    border: None;
+}
+#pc-obj-label-ports {
+    margin-left: 10px;
+    width: 12%;
+}
+.pc-obj-ports {
+    height: 100%;
+    width: 12%;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 10px;
+    border: None;
+}
+#pc-obj-label-owner { display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
+    margin-left: 10px;
+    width: 14%;
+}
+.pc-div-password { display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
+    margin-right: 10px;
+    width: 14%;
+    height: 80%;
+}
+.pc-obj-password {
+    margin: 3px;
+    border: 2px solid white;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 100%;
+    width: 100%;
+}
+.pc-obj-password:hover {
+    border-radius: 0;
+    border: 2px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#pc-obj-label-status {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 8%;
+}
+.pc-obj-status {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 8%;
+}
+#pc-obj-hidden-button {
+    margin-left: 10px;
+    margin-right: 10px;
+    visibility: hidden;
+}
+.pc-obj-hidden-button {
+    margin-left: 10px;
+    margin-right: 10px;
+    visibility: hidden;
+}
+.pc-obj-button {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.pc-obj-hidden-select {
+    margin-left: 10px;
+    margin-right: 10px;
+    visibility: hidden;
+    transform: scale(1.20);
+}
+.pc-obj-select {
+    margin-left: 10px;
+    margin-right: 10px;
+    transform: scale(1.20);
+}
+#pc-obj-button-deactivate {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#pc-obj-button-deploy {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#pc-obj-button-create-channel {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#pc-obj-button-attach-channel {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#pc-obj-button-manage-channel {
+    margin-top: 10px;
+}
+
+#pc-obj-button-menu {
+    margin-top: 10px;
+}
+
+.pc-div-owner { display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
+    margin-left: 10px;
+    width: 14%;
+}
+
+.pc-obj-owner {
+    margin: 3px;
+}
+

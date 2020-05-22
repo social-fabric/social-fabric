@@ -1,0 +1,17 @@
+/*
+ Copyright (c) 2020 - Neptunium Inc.
+
+ SPDX-License-Identifier: Apache-2.0
+ */
+
+#pco-hdiv-middle { display: flex; flex-direction: row; justify-content: center; align-items: center;
+    height: 100%;
+    width: 100%;
+}
+#pco-log-area {
+    height: 100%;
+    width: 100%;
+    font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    background-color: white;
+    overflow-y: auto;
+}

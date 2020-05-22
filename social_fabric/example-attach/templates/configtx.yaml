@@ -1,0 +1,54 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+---
+################################################################################
+#
+#   Section: Organizations
+#
+#   - This section defines the different organizational identities which will
+#   be referenced later in the configuration.
+#
+################################################################################
+Organizations:
+
+{% for org in BCC_ORG_LIST %}
+    - &{{ org['name'] }}
+        # DefaultOrg defines the organization which is used in the sampleconfig
+        # of the fabric.git development environment
+        Name: {{ org['name'] }}MSP
+
+        # ID to load the MSP definition as
+        ID: {{ org['name'] }}MSP
+
+        MSPDir: ../organizations/peerOrganizations/{{ org['addr'] }}/msp
+
+        # Policies defines the set of policies at this level of the config tree
+        # For organization policies, their canonical path is usually
+        #   /Channel/<Application|Orderer>/<OrgName>/<PolicyName>
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('{{ org['name'] }}MSP.admin', '{{ org['name'] }}MSP.peer', '{{ org['name'] }}MSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('{{ org['name'] }}MSP.admin', '{{ org['name'] }}MSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('{{ org['name'] }}MSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('{{ org['name'] }}MSP.peer')"
+
+        # leave this flag set to true.
+        AnchorPeers:
+            # AnchorPeers defines the location of peers which can be used
+            # for cross org gossip communication.  Note, this value is only
+            # encoded in the genesis block in the Application section context
+            {% for peer in BCC_PEER_DICT[org['addr']] %}
+            - Host: {{ peer['addr'] }}
+              Port: {{ peer['ports'].split(';')[0] }}
+          {% endfor %}
+{% endfor %}

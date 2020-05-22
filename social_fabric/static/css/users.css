@@ -1,0 +1,144 @@
+/*
+ Copyright (c) 2020 - Neptunium Inc.
+
+ SPDX-License-Identifier: Apache-2.0
+ */
+
+#puser-obj-add-user {
+}
+
+#puser-vdiv-middle { display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
+    height: 100%;
+    width: 100%;
+}
+#puser-user-list-header {
+    display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-end;
+    height: 10%;
+    width: 100%;
+    border-bottom: black solid 2px;
+    padding: 0;
+    margin: 0;
+}
+#puser-user-list {
+    display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.puser-user-list-row {
+    display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 0;
+    margin: 2px 0 2px 0;
+}
+#puser-obj-label-username {
+    width: 30%;
+    text-align: left;
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+.puser-obj-username {
+    width: 30%;
+    text-align: left;
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+#puser-obj-label-realname {
+    width: 30%;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+.puser-obj-realname {
+    height: 100%;
+    width: 30%;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 10px;
+    border: None;
+}
+#puser-obj-label-password {
+    width: 20%;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+.puser-obj-password {
+    height: 80%;
+    width: 20%;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 10px;
+    border: 2px solid white;
+}
+.puser-obj-password:hover {
+    border: 2px solid black;
+}
+#puser-obj-label-admin {
+    width: 5%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.puser-obj-div-admin { display: flex; flex-direction: row; justify-content: center; align-items: center;
+    width: 5%;
+    margin: 0;
+    padding: 0;
+}
+#puser-obj-label-create {
+    width: 5%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.puser-obj-div-create { display: flex; flex-direction: row; justify-content: center; align-items: center;
+    width: 5%;
+    margin: 0;
+    padding: 0;
+}
+#puser-obj-label-copy {
+    width: 5%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.puser-obj-div-copy { display: flex; flex-direction: row; justify-content: center; align-items: center;
+    width: 5%;
+    margin: 0;
+    padding: 0;
+}
+#puser-obj-label-conceal {
+    width: 5%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.puser-obj-div-conceal { display: flex; flex-direction: row; justify-content: center; align-items: center;
+    width: 5%;
+    margin: 0;
+    padding: 0;
+}
+#puser-obj-label-delete {
+    width: 5%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.puser-obj-div-delete { display: flex; flex-direction: row; justify-content: center; align-items: center;
+    width: 5%;
+    margin: 0;
+    padding: 0;
+}
+#puser-obj-hidden-button-delete {
+    visibility: hidden;
+    margin: 2px;
+}
+.puser-obj-button-delete {
+    margin: 2px;
+}
+#puser-obj-button-close {
+}
