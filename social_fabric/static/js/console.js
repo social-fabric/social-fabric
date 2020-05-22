@@ -8,7 +8,7 @@ let pageConsole =
     '<div class="p-vdiv-all">\n' +
     '   <div class="p-hdiv-top">\n' +
     '      <label class="p-obj-title" ><h1>Blockchain Component Deployment</h1></label>\n' +
-    '      <label class="p-help-link" onclick="window.open(\'docs/index.html\', \'_blank\')">help and documentation</label>\n' +
+    '      <label class="p-help-link" onclick="window.open(\'docs/html/index.html\', \'_blank\')">help and documentation</label>\n' +
     '   </div>\n' +
     '   <div id="pco-hdiv-middle">\n' +
     '      <div id="pco-log-area"></div>\n' +

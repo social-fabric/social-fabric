@@ -60,6 +60,7 @@ os.chdir(ConfigRepo.DATA_REPO)
 root = logging.getLogger()
 root.addHandler(default_handler)
 log = logging.getLogger('werkzeug')
+os.makedirs(app.config['LOG_PATH'], exist_ok=True)
 rotating_handler = RotatingFileHandler(app.config['LOG_PATH'] + os.sep + 'SocialFabric.log',
                                     maxBytes=app.config['LOG_MAX_SIZE'],
                                     backupCount=app.config['LOG_MAX_FILES'])
@@ -151,9 +152,9 @@ def do_change_admin_password():
 
 
 # ---- Documentation ---
-@app.route('/docs/<path:text>')
+@app.route('/docs/html/<path:text>')
 def do_docs(text):
-    return send_from_directory('docs', text)
+    return send_from_directory('../docs/html', text)
 
 @app.route('/main', methods=['GET'])
 @login_required

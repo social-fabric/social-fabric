@@ -41,5 +41,6 @@ PyInstaller.__main__.run(
      '--add-data=social_fabric/static/css/*.css:social_fabric/static/css']
     + recurse_add_data('social_fabric/example-network')
     + recurse_add_data('social_fabric/example-attach')
+    + recurse_add_data('docs/html')
     + ['--add-binary=social_fabric/bin/*:social_fabric/bin',
        os.path.join('social_fabric', '__main__.py')])

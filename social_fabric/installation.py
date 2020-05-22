@@ -6,6 +6,7 @@
 
 import os
 import sys
+import stat
 import json
 from time import sleep
 from getch import getch
@@ -275,6 +276,7 @@ class Install:
                     'docker rm `docker ps -aq`\n' +
                     'docker volume prune -f\n' +
                     'docker network prune -f\n')
+            os.fchmod(f.fileno(), stat.S_IRWXU | stat.S_IRWXG | stat.S_IROTH | stat.S_IXOTH)
             cls._info_('configuration file ' + os.path.join(data_path, 'dockerclean.sh') + ' created')
 
         # Write distclean.sh file
@@ -288,6 +290,7 @@ class Install:
                     'rm -rf SocialFabric.egg-info' +
                     'rm -rf __pycache__\n' +
                     'rm -rf dist\n')
+            os.fchmod(f.fileno(), stat.S_IRWXU | stat.S_IRWXG | stat.S_IROTH | stat.S_IXOTH)
             cls._info_('configuration file ' + os.path.join(data_path, 'distclean.sh') + ' created')
 
         # Installation successful

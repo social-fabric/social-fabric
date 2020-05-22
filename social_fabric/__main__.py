@@ -1,5 +1,5 @@
 from gevent.pywsgi import WSGIServer
-from ors_blockchain.app import app
+from social_fabric.app import app
 
 def main():
     host = app.config['HOST']

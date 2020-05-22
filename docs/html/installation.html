@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; Social Fabric 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User Guide" href="user_guide.html" />
+    <link rel="prev" title="Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Social Fabric
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recommended-practice">Recommended Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#binary-distribution">Binary Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-and-configuration">Installation and Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#start-the-web-server">Start the Web Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-the-web-server-locally">Test the Web Server Locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_guide.html">Developers Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Social Fabric</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>The SocialFabric is a Web server that can be deployed on Linux server and that is access with an HTML5
+compatible browser (Chrome, Firefox, Edge, etc.)</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>In order to deploy this application, you will need</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A Linux server</p></li>
+<li><p>docker</p></li>
+<li><p>docker-compose</p></li>
+</ul>
+</div></blockquote>
+<p>The application should run on any standard Linux distribution having the x86_64 hardware architecture.</p>
+<p>To install docker, follow your Linux distribution instructions</p>
+<blockquote>
+<div><p>RedHat and CentOS Servers</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">docker</span></code></p>
+</div></blockquote>
+<p>Suse Server</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">zypper</span> <span class="pre">install</span> <span class="pre">docker</span></code></p>
+</div></blockquote>
+<p>Ubuntu Server</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">docker</span></code></p>
+</div></blockquote>
+</div></blockquote>
+<p>To install docker-compose, follow your Linux distribution instructions</p>
+<blockquote>
+<div><p>RedHat and CentOS Servers</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">docker</span></code></p>
+</div></blockquote>
+<p>Suse Server</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">zypper</span> <span class="pre">install</span> <span class="pre">docker</span></code></p>
+</div></blockquote>
+<p>Ubuntu Server</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">docker</span></code></p>
+</div></blockquote>
+</div></blockquote>
+<p>We strongly suggest that you refer to your Linux distribution documentation for further details.</p>
+</div>
+<div class="section" id="recommended-practice">
+<h2>Recommended Practice<a class="headerlink" href="#recommended-practice" title="Permalink to this headline">¶</a></h2>
+<p>When installing a service, most Linux distribution recommend that you first create a specific user, with
+limited priviledges, for it.</p>
+<p><strong>Do not install the service with root privileges</strong></p>
+<p>To create a new user called <em>socialfabric</em>, type</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">adduser</span> <span class="pre">socialfabric</span> <span class="pre">-d</span> <span class="pre">/home/socialfabric</span></code></p>
+</div></blockquote>
+<p>If you whish to access this account directly, you may add a password</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">passwd</span> <span class="pre">socialfabric</span></code></p>
+</div></blockquote>
+<p>To create and manage user account, please refer to your Linux distribution</p>
+</div>
+<div class="section" id="binary-distribution">
+<h2>Binary Distribution<a class="headerlink" href="#binary-distribution" title="Permalink to this headline">¶</a></h2>
+<p>The server is available as a binary distribution that includes Hyperledger Fabric Components, compatible
+with the <em>x86_64</em> architecture Linux server.</p>
+<p>Download the binary on your chosen directory, for instance <code class="docutils literal notranslate"><span class="pre">/home/socialfabric</span></code></p>
+</div>
+<div class="section" id="installation-and-configuration">
+<h2>Installation and Configuration<a class="headerlink" href="#installation-and-configuration" title="Permalink to this headline">¶</a></h2>
+<p>To install and configure the web server, lunch the application with no argument</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">./SocialFabric</span></code></p>
+</div></blockquote>
+<p>The following lines will appear</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">usage:</span> <span class="pre">python</span> <span class="pre">app.py</span> <span class="pre">--config</span> <span class="pre">&lt;config</span> <span class="pre">file&gt;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Do</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">install</span> <span class="pre">and</span> <span class="pre">configure</span> <span class="pre">the</span> <span class="pre">application?</span> <span class="pre">[Y/n]:</span></code></p>
+</div></blockquote>
+<p>Type <em>enter</em> to install and configure the application.</p>
+<p>If docker and docker-compose are properly installed, you should see something like</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Verifying</span> <span class="pre">prerequisites</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Docker</span> <span class="pre">version</span> <span class="pre">18.09.7,</span> <span class="pre">build</span> <span class="pre">2d0083d</span> <span class="pre">found</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">version</span> <span class="pre">1.25.0,</span> <span class="pre">build</span> <span class="pre">0a186604</span> <span class="pre">found</span></code></p>
+</div></blockquote>
+<p>The installation process stops if requirements are not met.</p>
+<p>The process will ask for server name and port number</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">server</span> <span class="pre">hostname</span> <span class="pre">[localhost]:</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">listening</span> <span class="pre">port</span> <span class="pre">[5000]:</span></code></p>
+</div></blockquote>
+<p>Unless required, keep those values by typing <em>enter</em> twice.</p>
+<p>Note: This is not the public address of the server, nor the public port number. A Web portal, like nginx or apache, shall redirect to this service.</p>
+<p>Data diretory is where the installation process will create the directory tree structure containg data and json files.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">directory</span> <span class="pre">[/home/orsblockchain]:</span></code></p>
+</div></blockquote>
+<p>Type <em>enter</em> to keep this dorectory or give another one.</p>
+<p>The web server relies on a configuration file given at startup. By default, the installation
+process propose a sub diretory under the data directory called <em>config</em>. You may change it to something
+like <code class="docutils literal notranslate"><span class="pre">/etc/orsblockchain</span></code> if desired.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Path</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">configuration</span> <span class="pre">file</span> <span class="pre">[/home/orsblockchain/config]:</span></code></p>
+</div></blockquote>
+<p>If a directory does not exist, the system may ask if you want to create it.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Config</span> <span class="pre">path</span> <span class="pre">&quot;/home/frobert/essai/config&quot;</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">exist.</span> <span class="pre">Do</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">create</span> <span class="pre">it?</span> <span class="pre">[Y/n]:</span></code></p>
+</div></blockquote>
+<p>Finally, give an administrator password</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Administrator's</span> <span class="pre">password:</span></code></p>
+</div></blockquote>
+<p>and confirm it</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Confirm</span> <span class="pre">(re-enter)</span> <span class="pre">password:</span></code></p>
+</div></blockquote>
+<p>Password should have at lest one letter, one number, one special character and a at least 8 characters</p>
+<p>At this point, the installation process will pull all required Hyperledger Fabric Docker Images,
+create encryption keys, store password and create the configuration file.</p>
+<p>You should see something like:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">configuration</span> <span class="pre">file</span> <span class="pre">/home/orsblockchain/config/OrsBlockchain.json</span> <span class="pre">created</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Installation</span> <span class="pre">and</span> <span class="pre">configuration</span> <span class="pre">completed</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">You</span> <span class="pre">may</span> <span class="pre">start</span> <span class="pre">the</span> <span class="pre">server</span> <span class="pre">with:</span></code></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">/home/orsblockchain/OrsBlockchain</span> <span class="pre">--config</span> <span class="pre">/home/orsblockchain/config/OrsBlockchain.json</span></code></p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="start-the-web-server">
+<h2>Start the Web Server<a class="headerlink" href="#start-the-web-server" title="Permalink to this headline">¶</a></h2>
+<p>To start the server, you need a configuration file.</p>
+<blockquote>
+<div><p>OrsBlockchain –config &lt;Configuration file&gt;</p>
+</div></blockquote>
+<p>see previous section to install the server and create a configuration file.</p>
+</div>
+<div class="section" id="test-the-web-server-locally">
+<h2>Test the Web Server Locally<a class="headerlink" href="#test-the-web-server-locally" title="Permalink to this headline">¶</a></h2>
+<p>If you have access to a browser on the Linux server, you may lunch it with the following command</p>
+<blockquote>
+<div><p><a class="reference external" href="https://localhost:8080">http://localhost:8080</a></p>
+</div></blockquote>
+<p>You will be prompted with a username and a password</p>
+<blockquote>
+<div><p>username is <em>admin</em> and password is the one given during installation.</p>
+</div></blockquote>
+<p>See the user guide section for more details on how to use the application.</p>
+</div>
+<div class="section" id="next-steps">
+<h2>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h2>
+<p>Your server is now running locally on your Linux server, but since most Linux distribution includes a Firewall that
+prevents mapping ports above 1024 to the external world, you have to put a portal in front of it, with
+TLS (https) encryption, since password are conveyed between the browser and the server.</p>
+<p>Also,</p>
+<p>Once your blockchain components are configured and deployed, you will also need to map to the external world
+ports and adresses of your docker components.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="user_guide.html" class="btn btn-neutral float-right" title="User Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Neptunium Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

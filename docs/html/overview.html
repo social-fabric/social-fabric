@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview &mdash; Social Fabric 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Welcome to Social Fabric Documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Social Fabric
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#origin">Origin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functionalities">Functionalities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_guide.html">Developers Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Social Fabric</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Overview</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/overview.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>This page describes the blockchain component administration project</p>
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>The goal of this project is to provide a web user interface, fast and easy to use, to help structure and deploy components of an hyperledger fabric network</p>
+<p>By design, in order to simplify the user interface, several assumptions are taken:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>It uses docker containers</p></li>
+<li><p>The docker engine and this web server live on the same machine</p></li>
+<li><p>The application is accessible with an HTML5 compatible browser (Chrome, Firefox, Edge, Safari, etc)</p></li>
+<li><p>It creates Fabric Certificate Authorities (CA) to generate cryptographic material</p></li>
+<li><p>Fabric CA servers are autonomous (self signed and not connected to LDAP)</p></li>
+<li><p>There is one consortium for all orderers</p></li>
+<li><p>Peers are grouped under the umbrella of an organization</p></li>
+<li><p>Several organizations are allowed, each with several peers</p></li>
+<li><p>Peers are deployed with CouchDB databases</p></li>
+<li><p>Deployment is performed based on host names (dns names), no mapping to real ip addreses is provided</p></li>
+<li><p>Configuration of firewalls, addresses and other related security config is outside of this scope</p></li>
+<li><p>The server shall be placed under a web portal like nginx with tls encryption, since it conveys passwords</p></li>
+</ul>
+</div></blockquote>
+<p>If you need a custom deployment out of previous assumptions, you may alter templates being used by the tool.
+See Developpers guide for details on customization</p>
+</div>
+<div class="section" id="origin">
+<h2>Origin<a class="headerlink" href="#origin" title="Permalink to this headline">¶</a></h2>
+<p>The system is a generalisation, with assumptions, of the <a class="reference external" href="https://hyperledger-fabric.readthedocs.io/en/release-2.0/test_network.html">test-network</a> of Hyperledger Fabric</p>
+</div>
+<div class="section" id="functionalities">
+<h2>Functionalities<a class="headerlink" href="#functionalities" title="Permalink to this headline">¶</a></h2>
+<p>Current functionalities include the initial deployment</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Define components participating in the network</p></li>
+<li><p>Deploy and activate the network</p></li>
+<li><p>Create one or several channels</p></li>
+<li><p>Deactivate the network</p></li>
+<li><p>Reactivate the network</p></li>
+</ul>
+</div></blockquote>
+<p>and defining and attaching a new organization to the network:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Define new components participating in the network</p></li>
+<li><p>Deploy and activate the new components</p></li>
+<li><p>Import the new org to the existing network</p></li>
+<li><p>Join one or severals channela</p></li>
+<li><p>Deactivate the new components</p></li>
+<li><p>Reactivate the new components</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Social Fabric Documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Neptunium Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

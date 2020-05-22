@@ -8,7 +8,7 @@ let pageComponents =
     '<div class="p-vdiv-all">\n' +
     '   <div class="p-hdiv-top">\n' +
     '      <label class="p-obj-title" ><h1>Blockchain Component Administration</h1></label>\n' +
-    '      <label class="p-help-link" onclick="window.open(\'docs/index.html\', \'_blank\')">help and documentation</label>\n' +
+    '      <label class="p-help-link" onclick="window.open(\'docs/html/index.html\', \'_blank\')">help and documentation</label>\n' +
     '   </div>\n' +
     '   <div class="p-hdiv-middle">\n' +
     '      <h2><label id="pc-obj-consortium-addr" ></label></h2>\n' +
