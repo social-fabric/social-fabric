@@ -30,7 +30,9 @@ class ConfigRepo:
 
     # --- Examples ---
     EXAMPLE_NETWORK_REPO = 'example-network'
+    EXAMPLE_NETWORK_CONFIG_REPO = 'example-network/config'
     EXAMPLE_NETWORK_TEMPLATES_REPO = 'example-network/templates'
+    EXAMPLE_ATTACH_CONFIG_REPO = 'example-attach/config'
     EXAMPLE_ATTACH_TEMPLATES_REPO = 'example-attach/templates'
 
     # --- Sources ---
@@ -64,8 +66,10 @@ class ConfigRepo:
         cls.NETWORK_REPO = network
 
         # --- Examples ---
-        cls.EXAMPLE_NETWORK_REPO          = cls.DATA_REPO + os.sep + 'example-network'
+        cls.EXAMPLE_NETWORK_REPO           = cls.DATA_REPO + os.sep + 'example-network'
+        cls.EXAMPLE_NETWORK_CONFIG_REPO    = cls.DATA_REPO + os.sep + 'example-network/config'
         cls.EXAMPLE_NETWORK_TEMPLATES_REPO = cls.DATA_REPO + os.sep + 'example-network/templates'
+        cls.EXAMPLE_ATTACH_CONFIG_REPO     = cls.DATA_REPO + os.sep + 'example-attach/config'
         cls.EXAMPLE_ATTACH_TEMPLATES_REPO  = cls.DATA_REPO + os.sep + 'example-attach/templates'
 
         # --- Sources ---
@@ -122,6 +126,7 @@ class ConfigRepo:
             returned_mode = 'CreateNetwork'
             cls.set_network(ConfigNetwork.NETWORK_NAME)
             cls.create_source_dir()
+            copytree(cls.EXAMPLE_NETWORK_CONFIG_REPO, cls.CONFIG_REPO)
             copytree(cls.EXAMPLE_NETWORK_TEMPLATES_REPO, cls.TEMPLATE_SRC_DIR)
             ConfigRepo.save_working_conf(returned_mode, ConfigNetwork.NETWORK_NAME)
 
@@ -130,6 +135,7 @@ class ConfigRepo:
             returned_mode = 'AttachOrganizations'
             cls.set_network(ConfigNetwork.ATTACH_NAME)
             cls.create_source_dir()
+            copytree(cls.EXAMPLE_ATTACH_CONFIG_REPO, cls.CONFIG_REPO)
             copytree(cls.EXAMPLE_ATTACH_TEMPLATES_REPO, cls.TEMPLATE_SRC_DIR)
             ConfigRepo.save_working_conf(returned_mode, ConfigNetwork.ATTACH_NAME)
 

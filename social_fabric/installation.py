@@ -297,7 +297,7 @@ class Install:
         cls._success_('Installation and configuration completed')
         cls._success_('You may start the server with:')
         cls._info_('   ' + os.getcwd() + os.sep +
-                 'SocialFabric --config ' + config_path + os.sep + 'SocialFabric.json\n')
+                 'SocialFabric.bin --config ' + config_path + os.sep + 'SocialFabric.json\n')
         sys.exit(0)
 
 if __name__ == '__main__':
